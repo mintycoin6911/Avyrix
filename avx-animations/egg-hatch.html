@@ -1,0 +1,41 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AVX — Egg Hatch</title>
+<link rel="stylesheet" href="embed.css">
+<h1>🥚 AVX Egg Hatch</h1>
+<div class="card stage">
+  <svg id="egg" xmlns="http://www.w3.org/2000/svg" width="220" height="280" viewBox="0 0 220 280">
+    <defs>
+      <radialGradient id="g" cx="50%" cy="10%" r="80%"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#0b0b0b"/></radialGradient>
+      <style>
+        #egg .shell{fill:url(#g);stroke:#a78bfa;stroke-width:3}
+        #egg.crack .shell{animation:crack .7s ease forwards}
+        @keyframes crack{0%{transform:translateY(0)}60%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+        #egg .zig{stroke:#ff6b00;stroke-width:4;stroke-linecap:round;stroke-dasharray:8 10;opacity:0}
+        #egg.crack .zig{opacity:1}
+      </style>
+    </defs>
+    <ellipse class="shell" cx="110" cy="140" rx="82" ry="120"/>
+    <path class="zig" d="M40 150 Q70 140 90 150 T140 150 T180 150"/>
+  </svg>
+
+  <svg id="chick" xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+    <defs><style>
+      #chick{opacity:0;transform:translateY(20px)}
+      #chick.pop{animation:pop .6s ease forwards}
+      @keyframes pop{0%{opacity:0;transform:translateY(20px) scale(.9)}100%{opacity:1;transform:translateY(0) scale(1)}}
+      .body{fill:#a78bfa;stroke:#60a5fa;stroke-width:3}.eye{fill:#0b0b0b}.helm{fill:none;stroke:#ff6b00;stroke-width:4}
+    </style></defs>
+    <circle class="body" cx="120" cy="120" r="70"/>
+    <circle class="eye" cx="95" cy="110" r="7"/><circle class="eye" cx="145" cy="110" r="7"/>
+    <path class="helm" d="M70 88 Q120 58 170 88"/><path class="helm" d="M85 76 L120 62 L155 76"/>
+  </svg>
+</div>
+<div class="card">
+  <div class="controls">
+    <button id="btnHatch">Hatch Egg</button>
+    <span class="badge"><span class="dot"></span> Hint: tap Hatch again to replay.</span>
+  </div>
+</div>
+<script src="embed.js"></script>
