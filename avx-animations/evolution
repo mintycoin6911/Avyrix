@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Evolution Tiers</title>
+<link rel="stylesheet" href="embed.css">
+</head>
+<body>
+<div class="container">
+  <h2>Evolution Progress</h2>
+  <div id="tiers">
+    <img src="../images/tier1.png" alt="Tier 1">
+    <img src="../images/tier2.png" alt="Tier 2">
+    <img src="../images/tier3.png" alt="Tier 3">
+    <img src="../images/tier4.png" alt="Tier 4">
+    <img src="../images/tier5.png" alt="Tier 5">
+  </div>
+</div>
+</body>
+</html>
