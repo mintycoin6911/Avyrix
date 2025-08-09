@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aviryx — Welcome to the Nest</title>
+<meta name="description" content="Aviryx ($AVX) — Skullbird season. Dark skies. Memes that evolve.">
+<style>
+  :root{--purple:#a78bfa;--cyan:#60a5fa;--orange:#ff6b00;--bg:#0b0b0b;--ink:#e5e5e5}
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:Trebuchet MS,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;max-width:1100px;margin:0 auto;padding:28px;line-height:1.6}
+  h1,h2{color:#a78bfa;border-bottom:2px solid #a78bfa;padding-bottom:6px;text-shadow:0 0 6px #a78bfa,0 0 12px #60a5fa}
+  header{display:flex;align-items:center;gap:12px;margin:10px 0 14px}
+  .banner{border-radius:16px;border:1px solid rgba(167,139,250,.35);background:linear-gradient(135deg, #151522, #0d0d10);height:160px;display:grid;place-items:center;margin-bottom:16px;box-shadow:0 0 16px rgba(167,139,250,.15)}
+  .banner h1{margin:0;border:0;text-shadow:0 0 10px #a78bfa,0 0 18px #60a5fa}
+  .hero,.card{background:#121212;border:1px solid rgba(167,139,250,.35);border-radius:16px;padding:16px;box-shadow:0 0 12px rgba(167,139,250,.15),0 0 20px rgba(96,165,250,.08)}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:18px}
+  a{color:#60a5fa;text-decoration:none}
+  a:hover{text-shadow:0 0 8px var(--orange),0 0 14px #ff9f43}
+  .button{display:inline-block;margin-top:12px;padding:12px 18px;background:linear-gradient(90deg,var(--purple),var(--cyan));color:#0b0b0b;border-radius:12px;font-weight:800;text-decoration:none}
+  .buy{display:inline-block;padding:14px 24px;background:linear-gradient(90deg, var(--purple), var(--cyan));color:#fff;text-decoration:none;border-radius:12px;
+       font-size:1.05rem;font-weight:800;box-shadow:0 0 12px rgba(96,165,250,0.6),0 0 18px rgba(167,139,250,0.6);animation:pulse 2.2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.02)}}
+  .tracker-box{margin-top:10px;padding:12px;border:1px solid rgba(167,139,250,.3);border-radius:12px;background:#0f0f10}
+  /* Animations shared styles */
+  .stage{display:grid;place-items:center;background:radial-gradient(1200px 400px at 50% 120%, rgba(96,165,250,.2), transparent 60%);padding:24px;border-radius:12px}
+  .controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .progress{width:100%;height:14px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:999px;overflow:hidden}
+  .progress>.bar{height:100%;width:0%;background:linear-gradient(90deg,var(--purple),var(--cyan))}
+  .badge{display:inline-flex;gap:10px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid rgba(167,139,250,.3);background:#121212}
+  .badge .dot{width:10px;height:10px;border-radius:50%;background:var(--purple)}
+  .tier{display:none}.tier.show{display:block}
+</style>
+</head>
+<body>
+  <div class="banner"><h1>Welcome to the Nest</h1></div>
+
+  <section class="hero">
+    <p><strong>Aviryx ($AVX)</strong> — Skullbird season. Dark skies. Memes that evolve. Born from digital ruins with a bone-helm and a promise:
+      <em>We don’t chase moons — we haunt them.</em></p>
+    <p style="margin-top:6px">
+      🐦 <a href="https://x.com/AviryxCoin" target="_blank" rel="noopener">x.com/AviryxCoin</a> ·
+      💬 <a href="https://t.me/AviryxNest" target="_blank" rel="noopener">t.me/AviryxNest</a> ·
+      📜 <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <h2>🥚 Egg Hatch (Live)</h2>
+      <div class="stage">
+        <!-- EGG -->
+        <svg id="egg" xmlns="http://www.w3.org/2000/svg" width="220" height="280" viewBox="0 0 220 280">
+          <defs>
+            <radialGradient id="g" cx="50%" cy="10%" r="80%"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#0b0b0b"/></radialGradient>
+            <style>
+              #egg .shell{fill:url(#g);stroke:#a78bfa;stroke-width:3}
+              #egg.crack .shell{animation:crack .7s ease forwards}
+              @keyframes crack{0%{transform:translateY(0)}60%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+              #egg .zig{stroke:#ff6b00;stroke-width:4;stroke-linecap:round;stroke-dasharray:8 10;opacity:0}
+              #egg.crack .zig{opacity:1}
+            </style>
+          </defs>
+          <ellipse class="shell" cx="110" cy="140" rx="82" ry="120"/>
+          <path class="zig" d="M40 150 Q70 140 90 150 T140 150 T180 150"/>
+        </svg>
+        <!-- CHICK -->
+        <svg id="chick" xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+          <defs><style>
+            #chick{opacity:0;transform:translateY(20px)}
+            #chick.pop{animation:pop .6s ease forwards}
+            @keyframes pop{0%{opacity:0;transform:translateY(20px) scale(.9)}100%{opacity:1;transform:translateY(0) scale(1)}}
+            .body{fill:#a78bfa;stroke:#60a5fa;stroke-width:3}.eye{fill:#0b0b0b}.helm{fill:none;stroke:#ff6b00;stroke-width:4}
+          </style></defs>
+          <circle class="body" cx="120" cy="120" r="70"/>
+          <circle class="eye" cx="95" cy="110" r="7"/><circle class="eye" cx="145" cy="110" r="7"/>
+          <path class="helm" d="M70 88 Q120 58 170 88"/><path class="helm" d="M85 76 L120 62 L155 76"/>
+        </svg>
+      </div>
+      <div class="controls">
+        <button id="btnHatch" class="button">Hatch Egg</button>
+        <span class="badge"><span class="dot"></span> Tip: click the egg to replay.</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🪽 Evolutions (Live)</h2>
+      <div class="progress"><div class="bar" id="progBar"></div></div>
+      <div class="controls" style="margin-top:10px">
+        <button data-evo="2" class="button">Tier 2</button>
+        <button data-evo="3" class="button">Tier 3</button>
+        <button data-evo="4" class="button">Tier 4</button>
+        <button data-evo="5" class="button">Tier 5</button>
+        <button id="inc" class="button" style="background:#222;color:#e5e5e5;border:1px solid #333">+10% Progress</button>
+      </div>
+      <div class="stage">
+        <!-- Tier 2 (default visible) -->
+        <svg id="tier2" class="tier show" xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+          <defs><style>
+            .wrap{opacity:1;transform:translateY(0) scale(1)}
+            .bird{fill:#8ecaff;stroke:#60a5fa;stroke-width:4}
+            .skull{stroke:#ff6b00;stroke-width:4;fill:none}
+            .flame{fill:rgba(255,107,0,.1)} text{fill:#e5e5e5;font:700 16px Trebuchet MS, sans-serif}
+          </style></defs>
+          <g class="wrap">
+            <ellipse class="flame" cx="160" cy="150" rx="120" ry="50"/>
+            <path class="bird" d="M50 150 Q120 70 160 90 Q200 110 270 150 Q200 120 160 120 Q120 120 50 150 Z"/>
+            <path class="skull" d="M135 90 Q160 70 185 90 M145 80 L160 72 L175 80"/>
+            <text x="160" y="200" text-anchor="middle">Tier 2 Form</text>
+          </g>
+        </svg>
+        <!-- Tier 3 -->
+        <svg id="tier3" class="tier" xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+          <defs><style>
+            .wrap{opacity:1;transform:translateY(0) scale(1)}
+            .bird{fill:#7bd389;stroke:#22c55e;stroke-width:4}
+            .skull{stroke:#ff6b00;stroke-width:4;fill:none}
+            .flame{fill:rgba(255,107,0,.1)} text{fill:#e5e5e5;font:700 16px Trebuchet MS, sans-serif}
+          </style></defs>
+          <g class="wrap">
+            <ellipse class="flame" cx="160" cy="150" rx="120" ry="50"/>
+            <path class="bird" d="M50 150 Q120 70 160 90 Q200 110 270 150 Q200 120 160 120 Q120 120 50 150 Z"/>
+            <path class="skull" d="M135 90 Q160 70 185 90 M145 80 L160 72 L175 80"/>
+            <text x="160" y="200" text-anchor="middle">Tier 3 Form</text>
+          </g>
+        </svg>
+        <!-- Tier 4 -->
+        <svg id="tier4" class="tier" xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+          <defs><style>
+            .wrap{opacity:1;transform:translateY(0) scale(1)}
+            .bird{fill:#ffd166;stroke:#f59e0b;stroke-width:4}
+            .skull{stroke:#ff6b00;stroke-width:4;fill:none}
+            .flame{fill:rgba(255,107,0,.1)} text{fill:#e5e5e5;font:700 16px Trebuchet MS, sans-serif}
+          </style></defs>
+          <g class="wrap">
+            <ellipse class="flame" cx="160" cy="150" rx="120" ry="50"/>
+            <path class="bird" d="M50 150 Q120 70 160 90 Q200 110 270 150 Q200 120 160 120 Q120 120 50 150 Z"/>
+            <path class="skull" d="M135 90 Q160 70 185 90 M145 80 L160 72 L175 80"/>
+            <text x="160" y="200" text-anchor="middle">Tier 4 Form</text>
+          </g>
+        </svg>
+        <!-- Tier 5 -->
+        <svg id="tier5" class="tier" xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+          <defs><style>
+            .wrap{opacity:1;transform:translateY(0) scale(1)}
+            .bird{fill:#ff6b6b;stroke:#ef4444;stroke-width:4}
+            .skull{stroke:#ff6b00;stroke-width:4;fill:none}
+            .flame{fill:rgba(255,107,0,.1)} text{fill:#e5e5e5;font:700 16px Trebuchet MS, sans-serif}
+          </style></defs>
+          <g class="wrap">
+            <ellipse class="flame" cx="160" cy="150" rx="120" ry="50"/>
+            <path class="bird" d="M50 150 Q120 70 160 90 Q200 110 270 150 Q200 120 160 120 Q120 120 50 150 Z"/>
+            <path class="skull" d="M135 90 Q160 70 185 90 M145 80 L160 72 L175 80"/>
+            <text x="160" y="200" text-anchor="middle">Tier 5 Form</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📈 Live Chart & Buy</h2>
+      <p>Track $AVX on Dexscreener and ape in when ready.</p>
+      <div id="tracker" class="tracker-box">Chart link coming soon.</div>
+      <br>
+      <a id="buyButton" class="buy" href="https://pump.fun/coin/PLACEHOLDER" target="_blank" rel="noopener">🚀 Buy $AVX</a>
+    </div>
+  </div>
+
+  <footer style="margin-top:28px;color:#9aa;text-align:center">
+    © Aviryx — Welcome to the Nest · <a href="privacy.html">Privacy</a>
+  </footer>
+
+<script>
+  // ===== Dexscreener + Buy placeholders (replace after launch) =====
+  const DEXSCREENER_PAIR = "https://dexscreener.com/solana/PLACEHOLDERPAIRID";
+  document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById("buyButton").href = "https://pump.fun/coin/PLACEHOLDER";
+    const el=document.getElementById('tracker');
+    if (DEXSCREENER_PAIR && !DEXSCREENER_PAIR.includes('PLACEHOLDER')) {
+      const a=document.createElement('a');
+      a.href=DEXSCREENER_PAIR; a.target='_blank'; a.rel='noopener';
+      a.textContent='Open chart on Dexscreener';
+      a.style.display='inline-block'; a.style.padding='10px 14px';
+      a.style.borderRadius='10px'; a.style.textDecoration='none';
+      a.style.color='#0b0b0b'; a.style.background='linear-gradient(90deg,#a78bfa,#60a5fa)';
+      a.style.boxShadow='0 0 12px rgba(96,165,250,.5),0 0 18px rgba(167,139,250,.5)';
+      el.innerHTML=''; el.appendChild(a);
+    }
+  });
+
+  // ===== Animations: inline + fallbacks =====
+  (function(){
+    // Egg hatch
+    function hatch() {
+      const e=document.getElementById('egg');
+      const c=document.getElementById('chick');
+      if(!e||!c) return;
+      e.classList.remove('crack'); c.classList.remove('pop'); void e.offsetWidth;
+      e.classList.add('crack'); setTimeout(()=>c.classList.add('pop'),700);
+    }
+    document.getElementById('btnHatch')?.addEventListener('click', hatch);
+    document.getElementById('egg')?.addEventListener('click', hatch);
+
+    // Evolutions
+    function setProgress(v){const b=document.getElementById('progBar'); if(b) b.style.width=Math.max(0,Math.min(100,v))+'%';}
+    function showTier(n){
+      ['2','3','4','5'].forEach(id=>{
+        const el=document.getElementById('tier'+id);
+        if(el) el.classList.toggle('show', id===String(n));
+      });
+    }
+    let p=0; document.getElementById('inc')?.addEventListener('click',()=>{p=Math.min(100,p+10);setProgress(p);});
+    document.querySelectorAll('[data-evo]').forEach(btn=>{
+      btn.addEventListener('click',()=>showTier(btn.getAttribute('data-evo')));
+    });
+    showTier(2);
+  })();
+</script>
+</body>
+</html>
