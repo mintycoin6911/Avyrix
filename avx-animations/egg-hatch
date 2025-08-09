@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Egg Hatch Animation</title>
+<link rel="stylesheet" href="embed.css">
+</head>
+<body>
+<div class="container">
+  <img id="egg" src="../images/egg.png" alt="Egg">
+  <div id="message">Click the egg to hatch!</div>
+</div>
+<script src="embed.js"></script>
+</body>
+</html>
