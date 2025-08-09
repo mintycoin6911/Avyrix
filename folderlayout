@@ -1,0 +1,10 @@
+your-repo/
+├── index.html          ← this file
+├── privacy.html        ← your themed privacy page
+├── .nojekyll
+├── avx-animations/
+│   ├── egg-hatch.html
+│   ├── evolution.html
+│   ├── embed.css
+│   └── embed.js
+└── images/             (optional art assets)
