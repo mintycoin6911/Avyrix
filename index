@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aviryx — Welcome to the Nest</title>
+<meta name="description" content="Aviryx ($AVX) — Skullbird season. Dark skies. Memes that evolve.">
+
+<style>
+  :root{--purple:#a78bfa;--cyan:#60a5fa;--orange:#ff6b00;--bg:#0b0b0b;--ink:#e5e5e5}
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:Trebuchet MS,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;max-width:1100px;margin:0 auto;padding:28px;line-height:1.6}
+  h1,h2{color:#a78bfa;border-bottom:2px solid #a78bfa;padding-bottom:6px;text-shadow:0 0 6px #a78bfa,0 0 12px #60a5fa}
+  header{display:flex;align-items:center;gap:12px;margin:10px 0 14px}
+  .banner{border-radius:16px;border:1px solid rgba(167,139,250,.35);background:linear-gradient(135deg,#151522,#0d0d10);height:160px;display:grid;place-items:center;margin-bottom:16px;box-shadow:0 0 16px rgba(167,139,250,.15)}
+  .banner h1{margin:0;border:0;text-shadow:0 0 10px #a78bfa,0 0 18px #60a5fa}
+  .hero,.card{background:#121212;border:1px solid rgba(167,139,250,.35);border-radius:16px;padding:16px;box-shadow:0 0 12px rgba(167,139,250,.15),0 0 20px rgba(96,165,250,.08)}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:18px}
+  a{color:#60a5fa;text-decoration:none}
+  a:hover{text-shadow:0 0 8px var(--orange),0 0 14px #ff9f43}
+  .button{display:inline-block;margin-top:12px;padding:12px 18px;background:linear-gradient(90deg,var(--purple),var(--cyan));color:#0b0b0b;border-radius:12px;font-weight:800;text-decoration:none}
+  .buy{display:inline-block;padding:14px 24px;background:linear-gradient(90deg,var(--purple),var(--cyan));color:#fff;text-decoration:none;border-radius:12px;font-size:1.05rem;font-weight:800;box-shadow:0 0 12px rgba(96,165,250,.6),0 0 18px rgba(167,139,250,.6);animation:pulse 2.2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.02)}}
+  .tracker-box{margin-top:10px;padding:12px;border:1px solid rgba(167,139,250,.3);border-radius:12px;background:#0f0f10}
+  iframe{width:100%;border:none;border-radius:12px;background:#0b0b0b}
+  footer{margin-top:28px;color:#9aa;text-align:center}
+</style>
+</head>
+<body>
+  <!-- Banner -->
+  <div class="banner"><h1>Welcome to the Nest</h1></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p><strong>Aviryx ($AVX)</strong> — Skullbird season. Dark skies. Memes that evolve. Born from digital ruins with a bone-helm and a promise:
+      <em>We don’t chase moons — we haunt them.</em></p>
+    <p style="margin-top:6px">
+      🐦 <a href="https://x.com/AviryxCoin" target="_blank" rel="noopener">x.com/AviryxCoin</a> ·
+      💬 <a href="https://t.me/AviryxNest" target="_blank" rel="noopener">t.me/AviryxNest</a> ·
+      📜 <a href="./privacy.html">Privacy Policy</a>
+    </p>
+  </section>
+
+  <!-- Main grid -->
+  <div class="grid">
+    <!-- Egg Hatch -->
+    <div class="card">
+      <h2>🥚 Egg Hatch</h2>
+      <iframe src="./avx-animations/egg-hatch.html" height="520" title="Egg Hatch Demo"></iframe>
+      <p><a class="button" href="./avx-animations/egg-hatch.html" target="_blank">Open Egg Hatch</a></p>
+    </div>
+
+    <!-- Evolutions -->
+    <div class="card">
+      <h2>🪽 Evolution Tiers</h2>
+      <iframe src="./avx-animations/evolution.html" height="760" title="Evolution Demo"></iframe>
+      <p><a class="button" href="./avx-animations/evolution.html" target="_blank">Open Evolutions</a></p>
+    </div>
+
+    <!-- Buy + Chart -->
+    <div class="card">
+      <h2>📈 Live Chart & Buy</h2>
+      <p>Track $AVX on Dexscreener and ape in when ready.</p>
+      <div id="tracker" class="tracker-box">Chart link coming soon.</div>
+      <br>
+      <a id="buyButton" class="buy" href="https://pump.fun/coin/PLACEHOLDER" target="_blank" rel="noopener">🚀 Buy $AVX</a>
+    </div>
+  </div>
+
+  <footer>© Aviryx — Welcome to the Nest · <a href="./privacy.html">Privacy</a></footer>
+
+  <script>
+    // Replace these after mint
+    const DEXSCREENER_PAIR = "https://dexscreener.com/solana/PLACEHOLDERPAIRID";
+    document.addEventListener('DOMContentLoaded', function(){
+      // Buy button
+      document.getElementById("buyButton").href = "https://pump.fun/coin/PLACEHOLDER";
+      // Tracker link
+      const el = document.getElementById('tracker');
+      if (DEXSCREENER_PAIR && !DEXSCREENER_PAIR.includes('PLACEHOLDER')) {
+        const a = document.createElement('a');
+        a.href = DEXSCREENER_PAIR; a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = 'Open chart on Dexscreener';
+        a.style.display='inline-block'; a.style.padding='10px 14px';
+        a.style.borderRadius='10px'; a.style.textDecoration='none';
+        a.style.color='#0b0b0b';
+        a.style.background='linear-gradient(90deg,#a78bfa,#60a5fa)';
+        a.style.boxShadow='0 0 12px rgba(96,165,250,.5),0 0 18px rgba(167,139,250,.5)';
+        el.innerHTML=''; el.appendChild(a);
+      }
+    });
+  </script>
+</body>
+</html>
